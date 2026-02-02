@@ -10,7 +10,7 @@ import java.io.OutputStream;
 public class DownloadServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-        String fileName = "sample.txt";
+        String fileName = "sample%text.txt";
 
         try (InputStream is = getClass().getClassLoader().getResourceAsStream("static/" + fileName)) {
             if (is == null) {
